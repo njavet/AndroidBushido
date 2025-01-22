@@ -7,8 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -53,13 +55,16 @@ fun Bushido(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxSize(),
             contentScale = androidx.compose.ui.layout.ContentScale.Crop
         )
+        Button(onClick = {},
+            modifier = Modifier.fillMaxWidth()) {Text("Lifting")}
         TextField(
             value = inputText,
             onValueChange = { inputText = it},
             modifier = Modifier
-                .align(Alignment.Center)
+                .align(
+                    Alignment.BottomCenter)
                 .padding(16.dp),
-            textStyle = TextStyle(color = Color.White)
+            textStyle = TextStyle(color = Color.Magenta)
         )
 
     }
