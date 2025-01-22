@@ -22,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -50,10 +51,10 @@ fun Bushido(modifier: Modifier = Modifier) {
 
     Box(modifier.fillMaxSize()) {
         Image(
-            painterResource(id = R.drawable.bushido),
+            painterResource(id = R.drawable.frame),
             contentDescription = "Bushido",
             modifier = Modifier.fillMaxSize(),
-            contentScale = androidx.compose.ui.layout.ContentScale.Crop
+            contentScale = ContentScale.FillHeight,
         )
         Button(onClick = {},
             modifier = Modifier.fillMaxWidth()) {Text("Lifting")}
